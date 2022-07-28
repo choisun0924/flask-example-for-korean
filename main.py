@@ -28,6 +28,12 @@ def json_test():
     # str이 json으로 변경되어 return 됩니다.
     return jsonify(thisOne)
 
+# html을 Server Side Rendering 방식 return 해줍니다
+@app.route("/home")
+def home():
+    return render_template("test.html")
+
+
 if __name__ == '__main__':
     app.run()
 
